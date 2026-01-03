@@ -24,6 +24,11 @@ nav {
 nav li {
   list-style-type: none;
 }
-nav li img {
-  width: 26px;
+.icon {
+  width: 30px;
+  transition: filter 0.1s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(96%) saturate(5913%) hue-rotate(4deg) brightness(101%) contrast(101%);
 }
