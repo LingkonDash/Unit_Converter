@@ -22,21 +22,74 @@
   <!-- custom css -->
    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-primary-bg">
+<body class="bg-primary-bg font-sans text-primary-text">
   <header class="bg-secondary-bg">
   <nav class="max-w-[1500px] mx-auto flex justify-between items-center p-5 lg:px-10">
-    <h1 class="text-primary-text text-3xl md:text-4xl font-bold">Unit Converter</h1>
+    <h1 class="text-3xl md:text-4xl font-bold">Unit Converter</h1>
     <ul class="hidden md:flex justify-center items-center gap-15 lg:gap-20">
-      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/home-icon.png" alt="Home">Home</a></li>
-      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_equationico.png" alt="Investment">Calculator</a></li>
-      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_house-value.png" alt="Menu Icon">Investment</a></li>
-      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_menu.png" alt="Menu Icon">Menu</a></li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition">
+        <a href="#" class="text-primary-text flex justify-center items-center flex-col">
+          <img class="size-8" src="images/icons/home-icon.png" alt="Home">Home</a>
+      </li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition">
+        <a href="#" class="flex justify-center items-center flex-col">
+          <img class="size-8" src="images/icons/nav_equationico.png" alt="Investment">Calculator</a>
+      </li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition">
+        <a href="#" class="flex justify-center items-center flex-col">
+          <img class="size-8" src="images/icons/nav_house-value.png" alt="Menu Icon">Investment</a>
+      </li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition">
+        <a href="#" class="flex justify-center items-center flex-col">
+          <img class="size-8" src="images/icons/nav_menu.png" alt="Menu Icon">Menu</a>
+      </li>
     </ul>
     <img class="size-8 md:hidden" src="images/icons/hamburger-menu.png" alt="Option icon">
   </nav>
   </header>
-  <main>
-   <h1 class="text-clifford">Length converter</h1>
+  <main class="p-5 lg:p-0">
+    <section class="my-10 mx-auto px-10 py-15 md:my-15 max-w-[900px] border border-border-bg rounded-3xl bg-secondary-bg">
+      <h2 class="text-3xl md:text-5xl font-bold text-center">Length converter</h2>
+      <div class="grid grid-cols-4 md:grid-cols-9 justify-center items-center mt-10 gap-5">
+        <div class="border border-border-bg row-span-2 col-span-4 text-3xl md:text-4xl font-bold rounded-t-2xl">
+          <input type="text" id="inp" class="w-[100%] h-20 focus:outline-none text-center" autocomplete="off">
+          <select name="select" id="type-select" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
+            <option value="km">Kilometer</option>
+            <option value="m" selected>Meter</option>
+            <option value="cm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="microme">Micrometer</option>
+            <option value="nanome">Nanometer</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="ft">Foot</option>
+            <option value="in">Inch</option>
+            <option value="nautiMile">Nautical mile</option>
+          </select>
+        </div>
+          <p class="text-center text-3xl col-span-4 md:col-span-1">=</p>
+        <div class="border border-border-bg row-span-2 col-span-4 text-3xl md:text-4xl font-bold rounded-t-2xl">
+          <div class="w-[100%] h-20 text-center"></div>
+          <select name="select" id="type-select" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
+            <option value="km" selected>Kilometer</option>
+            <option value="m">Meter</option>
+            <option value="cm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="microme">Micrometer</option>
+            <option value="nanome">Nanometer</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="ft">Foot</option>
+            <option value="in">Inch</option>
+            <option value="nautiMile">Nautical mile</option>
+          </select>
+        </div>
+          <p class="text-center hidden md:inline text-3xl font-bold">to</p>
+      </div>
+      <div class="mt-15 md:mx-20 text-3xl font-bold">
+        <h3>Formula: </h3>
+      </div>
+    </section>
   </main>
   <script src="main.js" defer></script>
 </body>
