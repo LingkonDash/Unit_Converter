@@ -13,14 +13,26 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
       @theme {
-        --color-primary: #da373d;
+        --color-primary-text: #D3DAD9;
+        --color-primary-bg: #37353E;
+        --color-secondary-bg: #44444E;
+        --color-border-bg: #715A5A;
       }
   </style>
+  <!-- custom css -->
+   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-  <nav>
-
+<body class="bg-primary-bg">
+  <header class="bg-secondary-bg">
+  <nav class="max-w-[1500px] mx-auto flex justify-between items-center p-5 lg:px-10">
+    <h1 class="text-primary-text text-3xl md:text-4xl font-bold">Unit Converter</h1>
+    <ul class="hidden md:flex justify-center items-center gap-15 lg:gap-20">
+      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/home-icon.png" alt="Home">Home</a></li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_equationico.png" alt="Investment">Calculator</a></li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_house-value.png" alt="Menu Icon">Investment</a></li>
+      <li class="border-4 border-transparent hover:border-b-primary-text transition"><a href="#" class="text-primary-text flex justify-center items-center flex-col"><img class="size-8" src="images/icons/nav_menu.png" alt="Menu Icon">Menu</a></li>
+    </ul>
+    <img class="size-8 md:hidden" src="images/icons/hamburger-menu.png" alt="Option icon">
   </nav>
   </header>
   <main>
