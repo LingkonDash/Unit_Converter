@@ -1,3 +1,4 @@
 img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(146%) hue-rotate(118deg) brightness(93%) contrast(90%);
+  /* filter: brightness(0) saturate(100%) invert(89%) sepia(6%) saturate(146%) hue-rotate(118deg) brightness(93%) contrast(90%); */
+  filter: invert(40%) sepia(98%) saturate(2077%) hue-rotate(181deg) brightness(94%) contrast(101%);
 }

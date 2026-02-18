@@ -14,9 +14,9 @@
   <style type="text/tailwindcss">
       @theme {
         --color-primary-text: #D3DAD9;
-        --color-primary-bg: #252428;
-        --color-secondary-bg: #37353E;
-        --color-border-bg: #715A5A;
+        --color-primary-bg: #1e1e1e;
+        --color-secondary-bg: #252525;
+        --color-border-bg: #007acc;
       }
   </style>
   <!-- custom css -->
@@ -25,7 +25,7 @@
 <body class="bg-primary-bg font-sans text-primary-text">
   <header class="bg-secondary-bg">
   <nav class="max-w-[1500px] mx-auto flex justify-between items-center p-5 lg:px-10">
-    <h1 class="text-3xl md:text-4xl font-bold">Unit Converter</h1>
+    <h1 class="text-3xl md:text-4xl text-border-bg font-bold">Unit Converter</h1>
     <ul class="hidden md:flex justify-center items-center gap-8 lg:gap-18">
       <li class="border-4 px-3 border-transparent hover:border-b-border-bg transition">
         <a href="#" class="text-primary-text flex justify-center items-center flex-col">
@@ -54,14 +54,14 @@
       <h2 class="text-3xl md:text-4xl font-bold text-center">Length converter</h2>
       <div class="grid grid-cols-4 md:grid-cols-9 justify-center items-center mt-10 gap-5">
         <div class="border border-border-bg row-span-2 col-span-4 text-3xl font-bold rounded-t-2xl">
-          <input type="text" id="inp" class="w-[100%] h-20 focus:outline-none text-center" autocomplete="off">
-          <select name="select" id="type-select" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
+          <input type="text" id="inp" placeholder="0" class="w-[100%] h-20 focus:outline-none text-center"  autocomplete="off">
+          <select name="select" id="type1" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
             <option value="km">Kilometer</option>
             <option value="m" selected>Meter</option>
             <option value="cm">Centimeter</option>
             <option value="mm">Millimeter</option>
-            <option value="microme">Micrometer</option>
-            <option value="nanome">Nanometer</option>
+            <option value="micro">Micrometer</option>
+            <option value="nano">Nanometer</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
             <option value="ft">Foot</option>
@@ -71,14 +71,14 @@
         </div>
           <p class="text-center text-3xl col-span-4 md:col-span-1">=</p>
         <div class="border border-border-bg row-span-2 col-span-4 text-3xl font-bold rounded-t-2xl">
-          <div class="w-[100%] h-20 text-center"></div>
-          <select name="select" id="type-select" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
+          <input type="text" id="result" autocomplete="off" placeholder="0" class="w-[100%] h-20 focus:outline-none text-center">
+          <select name="select" id="type2" class="border border-border-bg bg-border-bg w-[100%] focus:outline-border-bg px-5 py-2">
             <option value="km" selected>Kilometer</option>
             <option value="m">Meter</option>
             <option value="cm">Centimeter</option>
             <option value="mm">Millimeter</option>
-            <option value="microme">Micrometer</option>
-            <option value="nanome">Nanometer</option>
+            <option value="micro">Micrometer</option>
+            <option value="nano">Nanometer</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
             <option value="ft">Foot</option>
@@ -88,9 +88,9 @@
         </div>
           <p class="text-center hidden md:inline text-2xl font-bold">to</p>
       </div>
-      <button id="btn" class="bg-border-bg rounded-lg px-5 py-2 font-semibold text-xl block mx-auto mt-10 cursor-pointer scale-105 border border-transparent hover:border-primary-text transition">Convert</button>
+      <button id="btn" type="button" class="bg-border-bg rounded-lg px-5 py-2 font-semibold text-xl block mx-auto mt-10 cursor-pointer scale-110 active:scale-105 border border-transparent hover:border-primary-text transition">Convert</button>
       <div class="mt-10 text-xl font-semibold md:font-bold">
-        <h3 class="text-center">Formula: divide the length value by 1000 </h3>
+        <h3 class="text-center">Formula: <span id="formula"> Unit * ( Meter form of 1m / Meter form of 1km )</span></h3>
       </div>
     </section>
   </main>
